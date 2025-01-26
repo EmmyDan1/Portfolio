@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { HiMiniCheckBadge } from "react-icons/hi2";
 import { GrLink } from "react-icons/gr";
@@ -16,7 +15,7 @@ const About = () => {
       name: "Personal Portfolio Website",
       image: "https://picsum.photos/id/237/200/200",
       alt: "Personal Portfolio Website",
-      link: "#",
+      link: "https://portfolio-two-steel-93.vercel.app/",
     },
     {
       name: "Ip Address Tracker App",
@@ -24,44 +23,26 @@ const About = () => {
       alt: "Blog Website for a Fashion Brand",
       link: "https://emmydan1.github.io/ip-address-tracker/",
     },
-    // {
-    //   name: "Hotel Booking Website",
-    //   image: "https://picsum.photos/id/240/200/200",
-    //   alt: "Hotel Booking Website",
-    //   link: "#",
-    // },
-    // {
-    //   name: "Job Search Website",
-    //   image: "https://picsum.photos/id/241/200/200",
-    //   alt: "Job Search Website",
-    //   link: "#",
-    // },
-    // {
-    //   name: "Shopping App",
-    //   image: "https://picsum.photos/id/242/200/200",
-    //   alt: "Shopping App",
-    //   link: "#",
-    // },
   ];
+
   const projectInfo = (project) => {
     const element = document.createElement("div");
     element.className =
-      "px-2 py-4 bg-orange-500 absolute bottom-0 top-0 left-0 right-0 text-center flex justify-center items-center";
+      "px-2 py-4 text-center flex justify-center items-center";
+       element.style.zIndex = "999";
     element.innerHTML = `
-      <div>
-        <h3 class="font-bold text-orange-100 mb-2">${project.name}</h3>
-        <a
-          href="${project.link}"
-          class="bg-orange-100 text-orange-600 px-2 py-2 rounded-xl inline-block text-lg"
-        >
-          <GrLink
-            fontSize={24}
-            className="inline-block text-orange-500"
-          />
-          Link
-        </a>
-      </div>
-    `;
+        <div>
+          <h3 class="font-bold mb-2">${project.name}</h3>
+          <a
+            href="${project.link}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-orange-100 text-orange-600 px-2 py-2 rounded-xl inline-block text-lg"
+          >
+            <span class="inline-block text-orange-500">&#128279;</span> Link
+          </a>
+        </div>
+      `;
     return element;
   };
 
@@ -122,19 +103,6 @@ const About = () => {
               <div
                 key={i}
                 className="bg-white rounded-md overflow-hidden shadow-md relative"
-                onMouseOver={(e) => {
-                  const card = e.currentTarget;
-                  const projectInfoElement = projectInfo(project);
-                  card.appendChild(projectInfoElement);
-                }}
-                onMouseOut={(e) => {
-                  const card = e.currentTarget;
-                  const projectInfoElement =
-                    card.querySelector(".bg-orange-500");
-                  if (projectInfoElement) {
-                    card.removeChild(projectInfoElement);
-                  }
-                }}
               >
                 <a
                   href={project.link}
@@ -175,7 +143,6 @@ const About = () => {
         </div>
       </div>
     </section>
-    
   );
 };
 

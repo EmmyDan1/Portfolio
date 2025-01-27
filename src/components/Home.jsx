@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { FaAward } from "react-icons/fa6";
-import user from "../assets/User1.png";
+import user from "../assets/Profilephoto4use.png";
 
 const Home = () => {
   const [text, setText] = useState("");
@@ -88,7 +88,7 @@ const Home = () => {
           <img
             src={user}
             alt="Abass"
-            className="w-full h-auto object-cover rounded-lg shadow-md "
+            className="w-full h-auto object-cover rounded-lg shadow-md"
           />
         </div>
       </div>

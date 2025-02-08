@@ -18,18 +18,31 @@ const About = () => {
       link: "https://portfolio-two-steel-93.vercel.app/",
     },
     {
+      name: "DanMart Ecommerce Website",
+      image: "https://picsum.photos/id/240/200/200",
+      alt: "General Ecommerce Website",
+      link: "https://dan-mart-ecommerce.vercel.app/",
+    },
+    {
       name: "Ip Address Tracker App",
       image: "https://picsum.photos/id/239/200/200",
       alt: "Blog Website for a Fashion Brand",
       link: "https://emmydan1.github.io/ip-address-tracker/",
     },
+    {
+      name:"Fitness Admin App",
+      image: "https://picsum.photos/200/200",
+      alt: "Fitness Admin App",
+      link: "https://fitness-admin-dashboard.vercel.app/",
+    },
+
   ];
 
   const projectInfo = (project) => {
     const element = document.createElement("div");
     element.className =
       "px-2 py-4 text-center flex justify-center items-center";
-       element.style.zIndex = "999";
+    element.style.zIndex = "999";
     element.innerHTML = `
         <div>
           <h3 class="font-bold mb-2">${project.name}</h3>

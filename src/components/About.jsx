@@ -12,6 +12,12 @@ const About = () => {
       link: "https://discovaa.vercel.app/",
     },
     {
+      name: "VerVent Device Support and Repair",
+      image: "https://picsum.photos/id/236/200/200",
+      alt: "VerVent",
+      link:"https://https://vervent-ufql.vercel.app/"
+    },
+    {
       name: "Personal Portfolio Website",
       image: "https://picsum.photos/id/237/200/200",
       alt: "Personal Portfolio Website",
@@ -42,12 +48,6 @@ const About = () => {
       alt: "Browser Extensions",
       link:"https://https://browser-extensions-six.vercel.app/"
     },
-    {
-      name: "VerVent Device Support and Repair",
-      image: "https://picsum.photos/id/236/200/200",
-      alt: "VerVent",
-      link:"https://https://vervent-ufql.vercel.app/"
-    }
 
   ];
 

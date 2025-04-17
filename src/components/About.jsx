@@ -41,6 +41,12 @@ const About = () => {
       image: "https://picsum.photos/id/236/200/200",
       alt: "Browser Extensions",
       link:"https://https://browser-extensions-six.vercel.app/"
+    },
+    {
+      name: "VerVent Device Support and Repair",
+      image: "https://picsum.photos/id/236/200/200",
+      alt: "VerVent",
+      link:"https://https://vervent-ufql.vercel.app/"
     }
 
   ];

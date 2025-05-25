@@ -6,16 +6,23 @@ const About = () => {
   const [show, setShow] = useState(false);
   const projects = [
     {
+      name: "VerVent Device Support and Repair",
+      image: "https://picsum.photos/id/236/200/200",
+      alt: "VerVent",
+      link: "https://https://vervent-ufql.vercel.app/",
+    },
+
+    {
+      name: "Daniel's Table (Restaurant Website)",
+      image: "https://picsum.photos/id/235/200/200",
+      alt: "Daniel's Table (Restaurant Website)",
+      link: "https://daniel-s-table.vercel.app/",
+    },
+    {
       name: "Discovaa Website (StartUp)",
       image: "https://picsum.photos/id/238/200/200",
       alt: "Discovaa Website (StartUp)",
       link: "https://discovaa.vercel.app/",
-    },
-    {
-      name: "VerVent Device Support and Repair",
-      image: "https://picsum.photos/id/236/200/200",
-      alt: "VerVent",
-      link:"https://https://vervent-ufql.vercel.app/"
     },
     {
       name: "Personal Portfolio Website",
@@ -36,7 +43,7 @@ const About = () => {
       link: "https://emmydan1.github.io/ip-address-tracker/",
     },
     {
-      name:"Fitness Admin App",
+      name: "Fitness Admin App",
       image: "https://picsum.photos/200/200",
       alt: "Fitness Admin App",
       link: "https://fitness-admin-dashboard.vercel.app/",
@@ -46,9 +53,8 @@ const About = () => {
       name: "Browser Extensions",
       image: "https://picsum.photos/id/236/200/200",
       alt: "Browser Extensions",
-      link:"https://https://browser-extensions-six.vercel.app/"
+      link: "https://browser-extensions-six.vercel.app/",
     },
-
   ];
 
   const projectInfo = (project) => {
@@ -138,7 +144,7 @@ const About = () => {
                   <img
                     src={project.image}
                     alt={project.alt}
-                    className="w-full h-40 object-cover"
+                    className="w-full h-20 object-cover"
                   />
                   <div className="p-4">
                     <p>{project.name}</p>

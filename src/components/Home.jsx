@@ -87,7 +87,7 @@ const Home = () => {
         <div className="hidden w-full max-w-xs mx-auto -translate-x-32  lg:block">
           <img
             src={user}
-            alt="Abass"
+            alt="emmy"
             className="w-full h-auto object-cover rounded-lg shadow-md"
           />
         </div>

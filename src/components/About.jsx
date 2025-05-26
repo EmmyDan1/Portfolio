@@ -9,7 +9,7 @@ const About = () => {
       name: "VerVent Device Support and Repair",
       image: "https://picsum.photos/id/236/200/200",
       alt: "VerVent",
-      link: "https://https://vervent-ufql.vercel.app/",
+      link: "https://vervent-1.vercel.app/",
     },
 
     {
@@ -54,6 +54,12 @@ const About = () => {
       image: "https://picsum.photos/id/236/200/200",
       alt: "Browser Extensions",
       link: "https://browser-extensions-six.vercel.app/",
+    },
+    {
+      name: "Fitness App",
+      image: "https://picsum.photos/id/241/200/200",
+      alt: "Fitness App",
+      link: "https://fitness-admin-dashboard-rzoc.vercel.app/",
     },
   ];
 

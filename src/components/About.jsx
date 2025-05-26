@@ -55,12 +55,6 @@ const About = () => {
       alt: "Browser Extensions",
       link: "https://browser-extensions-six.vercel.app/",
     },
-    {
-      name: "Fitness App",
-      image: "https://picsum.photos/id/241/200/200",
-      alt: "Fitness App",
-      link: "https://fitness-admin-dashboard-rzoc.vercel.app/",
-    },
   ];
 
   const projectInfo = (project) => {

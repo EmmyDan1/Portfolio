@@ -55,6 +55,12 @@ const About = () => {
       alt: "Browser Extensions",
       link: "https://browser-extensions-six.vercel.app/",
     },
+    {
+      name: "Dancademy (Online Learning Platform)",
+      image: "https://picsum.photos/id/241/200/200",
+      alt: "Dancademy (Online Learning Platform)",
+      link: "https://dancademy.vercel.app/",
+    },
   ];
 
   const projectInfo = (project) => {

@@ -25,6 +25,12 @@ const About = () => {
       link: "https://discovaa.vercel.app/",
     },
     {
+      name: "Dancademy (Online Learning Platform)",
+      image: "https://picsum.photos/id/241/200/200",
+      alt: "Dancademy (Online Learning Platform)",
+      link: "https://dancademy.vercel.app/",
+    },
+    {
       name: "Personal Portfolio Website",
       image: "https://picsum.photos/id/237/200/200",
       alt: "Personal Portfolio Website",
@@ -54,12 +60,6 @@ const About = () => {
       image: "https://picsum.photos/id/236/200/200",
       alt: "Browser Extensions",
       link: "https://browser-extensions-six.vercel.app/",
-    },
-    {
-      name: "Dancademy (Online Learning Platform)",
-      image: "https://picsum.photos/id/241/200/200",
-      alt: "Dancademy (Online Learning Platform)",
-      link: "https://dancademy.vercel.app/",
     },
   ];
 

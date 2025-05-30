@@ -136,7 +136,7 @@ const About = () => {
           </div>
         </div>
         <div className="px-12 sm:px-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 ">
             {projects.map((project, i) => (
               <div
                 key={i}
@@ -150,7 +150,7 @@ const About = () => {
                   <img
                     src={project.image}
                     alt={project.alt}
-                    className="w-full h-20 object-cover"
+                    className="w-full  h-20 object-cover"
                   />
                   <div className="p-4">
                     <p>{project.name}</p>
@@ -159,18 +159,19 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div>
+          <div className="">
             <h3 className="lg:text-2xl md:text-xl sm:text-lg text-base text-gray-800 font-bold mt-6 mb-2">
               Some Of My Projects
             </h3>
+
             <ul className="list-none">
               {projects.map((project, i) => (
                 <li
                   key={i}
-                  className="lg:text-lg md:text-base text-sm font-medium text-black"
+                  className="lg:text-md md:text-base text-sm font-medium text-black"
                 >
                   <HiMiniCheckBadge
-                    fontSize={30}
+                    fontSize={20}
                     className="inline-block text-orange-500"
                   />{" "}
                   {project.name}

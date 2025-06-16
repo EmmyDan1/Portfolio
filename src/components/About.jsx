@@ -42,7 +42,6 @@ const About = () => {
       ref={containerRef}
       className="relative overflow-hidden py-20 px-8"
     >
-     
       <motion.div
         style={{ y: yBg }}
         className="absolute inset-0 z-0 bg-gradient-to-br from-[#0e1024] to-[#1a1c3a]"
@@ -107,8 +106,6 @@ const About = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Projects Section */}
           <div className="lg:w-1/2">
             <motion.h2
               className="text-3xl font-bold text-white mb-8"
@@ -119,8 +116,6 @@ const About = () => {
             >
               Featured Projects
             </motion.h2>
-
-            {/* Horizontal Scroll Container */}
             <div className="relative">
               <motion.div
                 className="flex overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide"
@@ -168,6 +163,7 @@ const About = () => {
                               View Project <HiArrowRight className="ml-2" />
                             </a>
                           </div>
+                         
                         </div>
                       </div>
                     </motion.div>
@@ -175,7 +171,6 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Scroll hint */}
               <motion.div
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden lg:block"
                 animate={{ x: [0, 5, 0] }}
@@ -188,7 +183,6 @@ const About = () => {
               </motion.div>
             </div>
 
-            {/* View All Button */}
             <motion.div
               className="mt-8 text-center"
               initial={{ opacity: 0 }}

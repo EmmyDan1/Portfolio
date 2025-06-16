@@ -1,67 +1,19 @@
-import React, { useState } from "react";
-import { HiMiniCheckBadge } from "react-icons/hi2";
+import React, { useState, useRef } from "react";
+import { HiMiniCheckBadge, HiArrowRight } from "react-icons/hi2";
 import { GrLink } from "react-icons/gr";
+import { projects } from "./index.js";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const About = () => {
   const [show, setShow] = useState(false);
-  const projects = [
-    {
-      name: "VerVent Device Support and Repair",
-      image: "https://picsum.photos/id/236/200/200",
-      alt: "VerVent",
-      link: "https://vervent-1.vercel.app/",
-    },
+  const [selectedProject, setSelectedProject] = useState(null);
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
 
-    {
-      name: "Daniel's Table (Restaurant Website)",
-      image: "https://picsum.photos/id/235/200/200",
-      alt: "Daniel's Table (Restaurant Website)",
-      link: "https://daniel-s-table.vercel.app/",
-    },
-    {
-      name: "Discovaa Website (StartUp)",
-      image: "https://picsum.photos/id/238/200/200",
-      alt: "Discovaa Website (StartUp)",
-      link: "https://discovaa.vercel.app/",
-    },
-    {
-      name: "Dancademy (Online Learning Platform)",
-      image: "https://picsum.photos/id/241/200/200",
-      alt: "Dancademy (Online Learning Platform)",
-      link: "https://dancademy.vercel.app/",
-    },
-    {
-      name: "Personal Portfolio Website",
-      image: "https://picsum.photos/id/237/200/200",
-      alt: "Personal Portfolio Website",
-      link: "https://portfolio-two-steel-93.vercel.app/",
-    },
-    {
-      name: "DanMart Ecommerce Website",
-      image: "https://picsum.photos/id/240/200/200",
-      alt: "General Ecommerce Website",
-      link: "https://dan-mart-ecommerce.vercel.app/",
-    },
-    {
-      name: "Ip Address Tracker App",
-      image: "https://picsum.photos/id/239/200/200",
-      alt: "Blog Website for a Fashion Brand",
-      link: "https://emmydan1.github.io/ip-address-tracker/",
-    },
-    {
-      name: "Fitness Admin App",
-      image: "https://picsum.photos/200/200",
-      alt: "Fitness Admin App",
-      link: "https://fitness-admin-dashboard.vercel.app/",
-    },
-
-    {
-      name: "Browser Extensions",
-      image: "https://picsum.photos/id/236/200/200",
-      alt: "Browser Extensions",
-      link: "https://browser-extensions-six.vercel.app/",
-    },
-  ];
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   const projectInfo = (project) => {
     const element = document.createElement("div");
@@ -85,99 +37,172 @@ const About = () => {
   };
 
   return (
-    <section className="bg-gray-100" id="about">
-      <div className="md:grid md:grid-cols-2 md:gap-6 md:px-12 px-2 py-20 ">
-        <div className="md:col-span-1">
-          <div className="mb-12">
-            <div className="px-12 sm:px-0">
-              <p className="lg:text-xl md:text-xl sm:text-lg text-base text-black mb-4">
+    <section
+      id="about"
+      ref={containerRef}
+      className="relative overflow-hidden py-20 px-8"
+    >
+     
+      <motion.div
+        style={{ y: yBg }}
+        className="absolute inset-0 z-0 bg-gradient-to-br from-[#0e1024] to-[#1a1c3a]"
+      >
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-900/20 blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-purple-900/20 blur-3xl" />
+      </motion.div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12">
+          <motion.div
+            className="lg:w-1/2"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-8">About Me</h2>
+
+              <p className="text-lg text-gray-300 mb-6">
                 With over{" "}
-                <span className="text-orange-500 font-bold">3 years</span> of
+                <span className="text-orange-400 font-bold">3 years</span> of
                 experience as a web designer and developer, I specialize in
                 creating user-friendly, scalable, and high-quality digital
                 products as a frontend developer.
               </p>
-              <p className="lg:text-xl md:text-xl sm:text-lg text-base text-black mb-4">
+
+              <p className="text-lg text-gray-300 mb-8">
                 My expertise spans a wide range of technologies, including
                 HTML5, CSS3, JavaScript, React.js, and other modern frameworks
                 and tools. I am confident, naturally curious, and consistently
                 focused on improving my workflow to deliver projects on time.
               </p>
-            </div>
 
-            <div className="space-y-5 px-12 sm:px-0">
-              <h3 className="lg:text-2xl md:text-xl sm:text-lg text-base font-bold mt-6 mb-2">
-                What I Offer
-              </h3>
-              <ul className="list-none">
-                <li className="lg:text-lg md:text-base text-sm text-black font-medium">
-                  <HiMiniCheckBadge
-                    fontSize={30}
-                    className="inline-block text-orange-500"
-                  />{" "}
-                  Affordable prices
-                </li>
-                <li className="lg:text-lg md:text-base text-sm text-black font-medium">
-                  <HiMiniCheckBadge
-                    fontSize={30}
-                    className="inline-block text-orange-500"
-                  />{" "}
-                  High quality product
-                </li>
-                <li className="lg:text-lg md:text-base text-sm text-black font-medium">
-                  <HiMiniCheckBadge
-                    fontSize={30}
-                    className="inline-block text-orange-500"
-                  />{" "}
-                  On time project delivery
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="px-12 sm:px-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 ">
-            {projects.map((project, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-md overflow-hidden shadow-md relative"
-              >
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="w-full  h-20 object-cover"
-                  />
-                  <div className="p-4">
-                    <p>{project.name}</p>
-                  </div>
-                </a>
+              <div className="space-y-5">
+                <h3 className="text-2xl font-bold text-white mt-6 mb-4">
+                  What I Offer
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Affordable prices",
+                    "High quality product",
+                    "On time project delivery",
+                  ].map((item, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
+                      viewport={{ once: true }}
+                      className="text-lg text-gray-300 font-medium flex items-start"
+                    >
+                      <HiMiniCheckBadge
+                        className="text-orange-400 mt-1 mr-2 flex-shrink-0"
+                        size={20}
+                      />
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
-          <div className="">
-            <h3 className="lg:text-2xl md:text-xl sm:text-lg text-base text-gray-800 font-bold mt-6 mb-2">
-              Some Of My Projects
-            </h3>
+            </div>
+          </motion.div>
 
-            <ul className="list-none">
-              {projects.map((project, i) => (
-                <li
-                  key={i}
-                  className="lg:text-md md:text-base text-sm font-medium text-black"
-                >
-                  <HiMiniCheckBadge
-                    fontSize={20}
-                    className="inline-block text-orange-500"
-                  />{" "}
-                  {project.name}
-                </li>
-              ))}
-            </ul>
+          {/* Projects Section */}
+          <div className="lg:w-1/2">
+            <motion.h2
+              className="text-3xl font-bold text-white mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Featured Projects
+            </motion.h2>
+
+            {/* Horizontal Scroll Container */}
+            <div className="relative">
+              <motion.div
+                className="flex overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex space-x-6">
+                  {projects.map((project, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
+                      viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                      className="flex-shrink-0 w-72"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div
+                        className={`bg-gradient-to-br ${project.color} rounded-xl overflow-hidden shadow-xl h-full flex flex-col`}
+                      >
+                        <div className="h-40 overflow-hidden relative">
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-black/20 hover:bg-black/30 transition-colors duration-300" />
+                        </div>
+                        <div className="p-6 flex-1 flex flex-col">
+                          <h3 className="text-xl font-bold text-white mb-2">
+                            {project.name}
+                          </h3>
+                          <p className="text-gray-300 mb-4">
+                            {project.description}
+                          </p>
+                          <div className="mt-auto">
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
+                            >
+                              View Project <HiArrowRight className="ml-2" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Scroll hint */}
+              <motion.div
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden lg:block"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+              >
+                <div className="flex items-center text-gray-400">
+                  <span className="text-sm mr-2">Scroll</span>
+                  <HiArrowRight size={18} />
+                </div>
+              </motion.div>
+            </div>
+
+            {/* View All Button */}
+            <motion.div
+              className="mt-8 text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <a
+                href="#projects"
+                className="inline-block px-6 py-3 bg-white/10 text-white rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
+              >
+                View All Projects
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>

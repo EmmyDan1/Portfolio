@@ -5,20 +5,10 @@ import bootstrap from "../assets/bootstrap.png";
 import javascript from "../assets/js.png";
 import react from "../assets/react.png";
 import tailwindcss from "../assets/tailwindcss.png";
-import dart from "../assets/dart.png";
-import ejs from "../assets/ejs.png";
 import figma from "../assets/figma.png";
-import flutter from "../assets/flutter.png";
-import jwt from "../assets/jwt.png";
-import nodejs from "../assets/nodejs.png";
-import express from "../assets/expressjs.png";
-import php from "../assets/php.png";
-import laravel from "../assets/laravel.png";
-import mysql from "../assets/mysql.png";
-import sql from "../assets/sql.png";
-import jquery from "../assets/jquery.png";
 import github from "../assets/github.png";
-import gitlab from "../assets/gitlab.png";
+import typescript from "../assets/typescript.png";
+
 const Skills = () => {
   const skillsets = [
     { name: "HTML5", image: html },
@@ -27,10 +17,9 @@ const Skills = () => {
     { name: "JavaScript", image: javascript },
     { name: "React", image: react },
     { name: "TailwindCSS", image: tailwindcss },
-
     { name: "Figma", image: figma },
-
     { name: "GitHub", image: github },
+    { name: "TypeScript", image: typescript },
   ];
   return (
     <div className="md:px-12 px-2 py-12 skill-bg" id="skills">
@@ -48,7 +37,7 @@ const Skills = () => {
             <img
               src={skill.image}
               alt={skill.name}
-              className="w-20 mx-auto object-cover animate-pulse-slow"
+              className="w-16 mx-auto object-cover animate-pulse-slow"
             />
             <p className="text-center text-orange-900 font-bold mt-2">
               {skill.name}

@@ -9,6 +9,13 @@ const Experience = () => {
       jobDescription:
         "Built responsive and user-friendly web interface using modern frontend technologies. Designed reusable components and optimized UI performance while collaborating on custom software solutions.",
     },
+    {
+      jobTitle: "Frontend Instructor",
+      company: "Alusoft Technologies Ltd",
+      timePeriod: "May 2022 - Nov 2023",
+      jobDescription:
+        "Taught HTML, CSS, JavaScript, and React.js through structured hands on sessions.Mentored students and guided realworld projects to apply best practices.",
+    },
   ];
 
   const educationAndCertifications = [
@@ -25,9 +32,9 @@ const Experience = () => {
   ];
 
   return (
-    <section className="bg-white py-12 shadow-lg" id="experience">
-      <div className="container mx-auto px-4">
-        <h2 className="md:text-3xl sm:text-2xl text-xl font-bold mb-12 text-center">
+    <section className="bg-[#0e1024] py-12 shadow-lg" id="experience">
+      <div className="container mx-auto px-8">
+        <h2 className="text-white md:text-3xl sm:text-2xl text-xl font-bold mb-12 text-center">
           My <span className="text-orange-600">Work</span> Experience
         </h2>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-y-4 pl-4">
@@ -58,7 +65,7 @@ const Experience = () => {
             ))}
           </ol>
           <div className="mx-12">
-            <h2 className="md:text-3xl sm:text-2xl text-xl font-bold mb-6">
+            <h2 className="text-white md:text-3xl sm:text-2xl text-xl font-bold mb-6">
               <span className="text-orange-600">Education</span> &
               Certifications
             </h2>

@@ -16,25 +16,21 @@ const Navbar = () => {
   ];
 
   const handlePrint = () => {
-    const pdfUrl =
-      "https://drive.google.com/uc?export=download&id=1xJvqhfe_D6EXF1HmnymGzZqn-GzcLGQx";
-    const printWindow = window.open(pdfUrl, "_blank");
-
-    printWindow.onload = () => {
-      printWindow.print();
-    };
+    const link = document.createElement("a");
+    link.href = "/Daniel_Ojochenemi_CV.pdf";
+    link.download = "Daniel_Ojochenemi_CV.pdf";
+    link.click();
   };
 
   return (
     <>
-      {/* Navbar */}
       <header
         style={{ position: "sticky", top: 0, zIndex: 100 }}
-        className="shadow-lg bg-orange-600/80"
+        className="shadow-lg bg-orange-600/80 "
       >
-        <nav className="bg-white py-2 font-Inter flex items-center md:px-12 px-4">
-          <div className="">
-            <h3 className="text-black text-base sm:text-lg md:text-xl uppercase  cursor-pointer">
+        <nav className="bg-[#0e1024] text-white py-2 font-Inter flex items-center md:px-16 px-4">
+          <div className="pl-6">
+            <h3 className=" text-base sm:text-lg md:text-xl uppercase  cursor-pointer">
               <a href="/" className="font-bold font-robo">
                 Daniel
               </a>
@@ -46,8 +42,8 @@ const Navbar = () => {
               <li key={name}>
                 <a
                   href={path}
-                  className="text-black block px-4 py-2 text-sm md:text-base lg:text-lg tracking-wide font-medium 
-hover:bg-gray-100 hover:text-black 
+                  className=" block px-4 py-2 text-sm md:text-base lg:text-lg tracking-wide font-medium 
+ hover:text-yellow-700 
 hover:border-b-2 hover:border-gray-800 
 transition-all duration-300
 "
@@ -86,7 +82,7 @@ transition-all duration-300
           </div>
         </nav>
         {collapse && (
-          <div className="md:hidden bg-gray-300 pb-4 space-y-1">
+          <div className="md:hidden bg-[#0e1024] text-white pb-4 space-y-1">
             <ul className="flex flex-col capitalize">
               {navData.map(({ name, path }) => (
                 <li key={name}>

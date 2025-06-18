@@ -2,7 +2,6 @@ export { default as Home } from "./Home";
 export { default as Navbar } from "./Navbar";
 export { default as Experience } from "./Experience";
 export { default as Skills } from "./Skills";
-
 export { default as Footer } from "./Footer";
 export { default as About } from "./About";
 export { default as Contact } from "./Contact";
@@ -82,13 +81,13 @@ export const projects = [
     description:
       "A landing page for browser extensions with clean UI, feature highlights, and call-to-action sections.",
   },
-  {
-    name: "Abstract – Design Collaboration Platform",
-    image: "https://picsum.photos/id/236/200/200",
-    alt: "Abstract Design Collaboration Platform",
-    link: "https://abstract-oxm3.vercel.app/",
-    description:
-      "A modern web app inspired by Abstract for version control, real-time design collaboration, and project management. Built with React, Tailwind CSS, and Framer Motion.",
-    techStack: ["React", "Tailwind CSS", "Framer Motion"],
-  },
+  // {
+  //   name: "Abstract – Design Collaboration Platform",
+  //   image: "https://picsum.photos/id/236/200/200",
+  //   alt: "Abstract Design Collaboration Platform",
+  //   link: "https://abstract-oxm3.vercel.app/",
+  //   description:
+  //     "A modern web app inspired by Abstract for version control, real-time design collaboration, and project management. Built with React, Tailwind CSS, and Framer Motion.",
+  //   techStack: ["React", "Tailwind CSS", "Framer Motion"],
+  // },
 ];

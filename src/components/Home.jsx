@@ -154,7 +154,7 @@ const Home = () => {
             >
               <FaAward size={40} className="text-blue-400" />
               <div>
-                <h3 className="text-2xl font-bold text-white">3+ Years</h3>
+                <h3 className="text-2xl font-bold text-white">4+ Years</h3>
                 <p className="text-lg text-gray-300">Experience</p>
               </div>
             </motion.div>

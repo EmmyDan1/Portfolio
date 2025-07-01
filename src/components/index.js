@@ -1,3 +1,5 @@
+import { image } from "framer-motion/client";
+
 export { default as Home } from "./Home";
 export { default as Navbar } from "./Navbar";
 export { default as Experience } from "./Experience";
@@ -7,6 +9,14 @@ export { default as About } from "./About";
 export { default as Contact } from "./Contact";
 
 export const projects = [
+  {
+    name: "CrossGate",
+    image: "https://picsum.photos/id/237/200/200",
+    alt: "CrossGate",
+    link: "https://cross-gate.vercel.app/",
+    description:
+      "Trade bridge platform (React/TypeScript) linking Nordic exporters with African markets.",
+  },
   {
     name: "VerVent Device Support and Repair",
     image: "https://picsum.photos/id/236/200/200",

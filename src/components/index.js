@@ -27,6 +27,23 @@ export const projects = [
   },
 
   {
+    name: "Dancademy (Online Learning Platform)",
+    image: "https://picsum.photos/id/241/200/200",
+    alt: "Dancademy (Online Learning Platform)",
+    link: "https://dancademy.vercel.app/",
+    description:
+      "A sleek online learning platform for browsing, enrolling in, and tracking courses using a clean UI.",
+  },
+  {
+    name: "Abstract – Design Collaboration Platform",
+    image: "https://picsum.photos/id/236/200/200",
+    alt: "Abstract Design Collaboration Platform",
+    link: "https://abstract-five-eosin.vercel.app/",
+    description:
+      "A modern web app inspired by Abstract for version control, real-time design collaboration, and project management. Built with React, Tailwind CSS, and Framer Motion.",
+    techStack: ["React", "Tailwind CSS", "Framer Motion"],
+  },
+  {
     name: "Daniel's Table (Restaurant Website)",
     image: "https://picsum.photos/id/235/200/200",
     alt: "Daniel's Table (Restaurant Website)",
@@ -41,14 +58,6 @@ export const projects = [
     link: "https://discovaa.vercel.app/",
     description:
       "A full startup website with multiple sections, showcasing discovery features, event highlights, and company information — all built with a responsive and scalable design.",
-  },
-  {
-    name: "Dancademy (Online Learning Platform)",
-    image: "https://picsum.photos/id/241/200/200",
-    alt: "Dancademy (Online Learning Platform)",
-    link: "https://dancademy.vercel.app/",
-    description:
-      "A sleek online learning platform for browsing, enrolling in, and tracking courses using a clean UI.",
   },
   {
     name: "Personal Portfolio Website",
@@ -90,14 +99,5 @@ export const projects = [
     link: "https://browser-extensions-six.vercel.app/",
     description:
       "A landing page for browser extensions with clean UI, feature highlights, and call-to-action sections.",
-  },
-  {
-    name: "Abstract – Design Collaboration Platform",
-    image: "https://picsum.photos/id/236/200/200",
-    alt: "Abstract Design Collaboration Platform",
-    link: "https://abstract-five-eosin.vercel.app/",
-    description:
-      "A modern web app inspired by Abstract for version control, real-time design collaboration, and project management. Built with React, Tailwind CSS, and Framer Motion.",
-    techStack: ["React", "Tailwind CSS", "Framer Motion"],
   },
 ];

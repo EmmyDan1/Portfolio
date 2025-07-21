@@ -10,12 +10,37 @@ export { default as Contact } from "./Contact";
 
 export const projects = [
   {
+    name: "Dan-X(Saas Admin-Dashboard)",
+    image: "https://picsum.photos/id/234/200/200",
+    alt: "Dan-X(Saas Admin-Dashboard)",
+    link: "https://dan-x-dashboard.vercel.app/",
+    description:
+      "A SaaS admin dashboard with user management, analytics, and settings.",
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript",
+      "Context API",
+      "React Router",
+    ],
+  },
+
+  {
     name: "CrossGate",
     image: "https://picsum.photos/id/237/200/200",
     alt: "CrossGate",
     link: "https://cross-gate.vercel.app/",
     description:
       "Trade bridge platform (React/TypeScript) linking Nordic exporters with African markets.",
+  },
+  {
+    name: "Dancademy (Online Learning Platform)",
+    image: "https://picsum.photos/id/241/200/200",
+    alt: "Dancademy (Online Learning Platform)",
+    link: "https://dancademy.vercel.app/",
+    description:
+      "A sleek online learning platform for browsing, enrolling in, and tracking courses using a clean UI.",
   },
   {
     name: "VerVent Device Support and Repair",
@@ -26,14 +51,6 @@ export const projects = [
       "A responsive website for showcasing phone and device repair services with clear pricing and service categories.",
   },
 
-  {
-    name: "Dancademy (Online Learning Platform)",
-    image: "https://picsum.photos/id/241/200/200",
-    alt: "Dancademy (Online Learning Platform)",
-    link: "https://dancademy.vercel.app/",
-    description:
-      "A sleek online learning platform for browsing, enrolling in, and tracking courses using a clean UI.",
-  },
   {
     name: "Abstract – Design Collaboration Platform",
     image: "https://picsum.photos/id/236/200/200",
@@ -92,12 +109,5 @@ export const projects = [
       "An admin dashboard UI for managing users, plans, and analytics in a fitness-based web app.",
   },
 
-  {
-    name: "Browser Extensions",
-    image: "https://picsum.photos/id/236/200/200",
-    alt: "Browser Extensions",
-    link: "https://browser-extensions-six.vercel.app/",
-    description:
-      "A landing page for browser extensions with clean UI, feature highlights, and call-to-action sections.",
-  },
+
 ];

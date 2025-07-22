@@ -25,15 +25,6 @@ export const projects = [
       "React Router",
     ],
   },
-
-  {
-    name: "CrossGate",
-    image: "https://picsum.photos/id/237/200/200",
-    alt: "CrossGate",
-    link: "https://cross-gate.vercel.app/",
-    description:
-      "Trade bridge platform (React/TypeScript) linking Nordic exporters with African markets.",
-  },
   {
     name: "Dancademy (Online Learning Platform)",
     image: "https://picsum.photos/id/241/200/200",
@@ -52,13 +43,20 @@ export const projects = [
   },
 
   {
-    name: "Abstract – Design Collaboration Platform",
-    image: "https://picsum.photos/id/236/200/200",
-    alt: "Abstract Design Collaboration Platform",
-    link: "https://abstract-five-eosin.vercel.app/",
+    name: "DanMart Ecommerce Website",
+    image: "https://picsum.photos/id/240/200/200",
+    alt: "General Ecommerce Website",
+    link: "https://dan-mart-ecommerce.vercel.app/",
     description:
-      "A modern web app inspired by Abstract for version control, real-time design collaboration, and project management. Built with React, Tailwind CSS, and Framer Motion.",
-    techStack: ["React", "Tailwind CSS", "Framer Motion"],
+      "An ecommerce storefront with product listings, add-to-cart functionality, and responsive layout.",
+  },
+  {
+    name: "CrossGate",
+    image: "https://picsum.photos/id/237/200/200",
+    alt: "CrossGate",
+    link: "https://cross-gate.vercel.app/",
+    description:
+      "Trade bridge platform (React/TypeScript) linking Nordic exporters with African markets.",
   },
   {
     name: "Daniel's Table (Restaurant Website)",
@@ -84,14 +82,7 @@ export const projects = [
     description:
       "My personal portfolio showcasing frontend skills, featured projects, and professional experience.",
   },
-  {
-    name: "DanMart Ecommerce Website",
-    image: "https://picsum.photos/id/240/200/200",
-    alt: "General Ecommerce Website",
-    link: "https://dan-mart-ecommerce.vercel.app/",
-    description:
-      "An ecommerce storefront with product listings, add-to-cart functionality, and responsive layout.",
-  },
+
   {
     name: "Ip Address Tracker App",
     image: "https://picsum.photos/id/239/200/200",
@@ -100,14 +91,4 @@ export const projects = [
     description:
       "A tool that tracks IP address locations using an external API and displays them on an interactive map.",
   },
-  {
-    name: "Fitness Admin App",
-    image: "https://picsum.photos/200/200",
-    alt: "Fitness Admin App",
-    link: "https://fitness-admin-dashboard.vercel.app/",
-    description:
-      "An admin dashboard UI for managing users, plans, and analytics in a fitness-based web app.",
-  },
-
-
 ];

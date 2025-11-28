@@ -64,7 +64,7 @@ const About = () => {
 
               <p className="text-lg text-gray-300 mb-6">
                 With over{" "}
-                <span className="text-orange-400 font-bold">3 years</span> of
+                <span className="text-orange-400 font-bold">4 years</span> of
                 experience as a web designer and developer, I specialize in
                 creating user-friendly, scalable, and high-quality digital
                 products as a frontend developer.

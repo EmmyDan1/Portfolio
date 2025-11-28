@@ -57,30 +57,40 @@ const Home = () => {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen w-full bg-[#0e1024] text-white overflow-hidden relative py-10"
+      className="min-h-screen w-full bg-[#0a0a0a] text-white overflow-hidden relative py-10"
     >
+      {/* Enhanced gradient background with more sophistication */}
       <motion.div
         style={{ y: yBg }}
         className="absolute inset-0 z-0 pointer-events-none"
       >
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-900/30 blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-purple-900/30 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 rounded-full bg-indigo-900/20 blur-3xl" />
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-900/20 blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-purple-900/20 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 rounded-full bg-indigo-900/15 blur-3xl" />
+        {/* Added subtle grid overlay for depth */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
       </motion.div>
 
       <div className="flex flex-col lg:flex-row h-full items-center container mx-auto px-4 relative z-10">
+        {/* Mobile Image - Enhanced with better styling */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-xs mx-auto lg:hidden "
+          className="w-full max-w-xs mx-auto lg:hidden mb-8"
         >
-          <motion.img
-            src={user}
-            alt="Daniel Emmanuel"
-            className="w-full h-auto object-cover rounded-lg shadow-xl border-2 border-white/10"
+          <motion.div
             whileHover={{ scale: 1.02 }}
-          />
+            className="relative group"
+          >
+            <img
+              src={user}
+              alt="Daniel Emmanuel"
+              className="w-full h-auto object-cover rounded-2xl shadow-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300"
+            />
+            {/* Subtle glow effect on hover */}
+            <div className="absolute inset-0 rounded-2xl bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+          </motion.div>
         </motion.div>
 
         <motion.div
@@ -89,28 +99,30 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.div className="md:text-start pl-3 ">
+          <motion.div className="md:text-start pl-3">
+            {/* Enhanced badge with better styling */}
             <motion.span
-              className="inline-block border-2 bg-white/10 text-white border-white/20 px-4 py-1 rounded-full mb-6 backdrop-blur-sm"
+              className="inline-block bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white/90 border border-white/10 px-6 py-2 rounded-full mb-6 backdrop-blur-md font-medium text-sm tracking-wide"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.2)" }}
             >
-              Hello!
+              Hello! 👋
             </motion.span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              I'm <span className="text-blue-400">Daniel Emmanuel</span>,
+            {/* Enhanced typography hierarchy */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
+              I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Daniel Emmanuel</span>,
               <motion.span
-                className="block my-4 text-3xl md:text-4xl lg:text-5xl font-medium text-white"
+                className="block my-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-white/90 tracking-wide"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
                 {text}
                 <motion.span
-                  className="inline-block w-1 h-8 bg-blue-400 ml-1"
+                  className="inline-block w-0.5 h-8 bg-gradient-to-b from-blue-400 to-purple-400 ml-1"
                   animate={{ opacity: [0, 1, 0] }}
                   transition={{
                     repeat: Infinity,
@@ -121,91 +133,99 @@ const Home = () => {
               </motion.span>
             </h1>
           </motion.div>
+
+          {/* Enhanced quote section */}
           <motion.div
-            className="mb-12 max-w-lg relative mt-6 md:mt-4"
+            className="mb-12 max-w-2xl relative mt-6 md:mt-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
             <ImQuotesLeft
-              className="absolute -left-2 -top-4 text-white/40"
+              className="absolute -left-2 -top-4 text-blue-400/40"
               size={20}
             />
-            <p className="text-lg text-center md:text-xl text-gray-300 leading-relaxed md:text-start">
+            <p className="text-lg text-center md:text-xl text-gray-300 leading-relaxed md:text-start font-light tracking-wide">
               I build fast, responsive websites using React, TypeScript, and
               TailwindCSS. I'm dedicated to writing clean code, creating smooth
               interactions, and delivering a better experience for real users.
             </p>
             <ImQuotesRight
-              className="float-right   mr-4 text-white/40"
+              className="float-right mr-4 text-blue-400/40"
               size={20}
             />
           </motion.div>
 
+          {/* Enhanced stats and tech stack section */}
           <motion.div
             className="flex flex-col items-center md:flex-row md:items-start gap-8 mb-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
+            {/* Enhanced experience card */}
             <motion.div
-              whileHover={{ scale: 1.03 }}
-              className="flex items-center gap-4 bg-white/5 px-6 py-3 rounded-lg backdrop-blur-sm border border-white/10"
+              whileHover={{ scale: 1.03, y: -2 }}
+              className="flex items-center gap-4 bg-white/5 px-6 py-4 rounded-xl backdrop-blur-md border border-white/10 hover:border-white/20 transition-all duration-300 group"
             >
-              <FaAward size={40} className="text-blue-400" />
+              <div className="relative">
+                <FaAward size={40} className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-sm group-hover:blur-md transition-all duration-300" />
+              </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">4+ Years</h3>
-                <p className="text-lg text-gray-300">Experience</p>
+                <p className="text-lg text-gray-300 font-light">Experience</p>
               </div>
             </motion.div>
 
-            <div className="flex gap-4 flex-wrap">
+            {/* Enhanced tech stack with better spacing */}
+            <div className="flex gap-3 flex-wrap justify-center md:justify-start">
               {techStack.map((tech, i) => (
                 <motion.div
                   key={tech.name}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + i * 0.1 }}
-                  whileHover={{ y: -3 }}
-                  className="tooltip bg-white/10 p-3 rounded-lg border border-white/10 backdrop-blur-sm"
+                  whileHover={{ y: -3, scale: 1.05 }}
+                  className="group relative bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-white/20 transition-all duration-300"
                   data-tip={tech.name}
                 >
                   {tech.icon}
+                  {/* Tooltip effect */}
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                    {tech.name}
+                  </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
         </motion.div>
 
+        {/* Enhanced desktop image */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="hidden lg:block w-full max-w-[300px] ml-80"
+          className="hidden lg:block w-full max-w-[320px] ml-80"
         >
           <motion.div
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="relative"
-            style={{
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-            }}
+            className="relative group"
           >
             <motion.img
               src={user}
               alt="Daniel Emmanuel"
-              className="w-full h-auto object-cover shadow-2xl"
+              className="w-full h-auto object-cover rounded-2xl shadow-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300"
             />
+            {/* Enhanced animated overlay */}
             <motion.div
-              className="absolute inset-0 bg-blue-400/10 pointer-events-none"
-              style={{
-                clipPath:
-                  "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-              }}
+              className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               animate={{ opacity: [0.1, 0.2, 0.1] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
+            {/* Subtle outer glow */}
+            <div className="absolute inset-0 rounded-2xl bg-blue-400/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.div>
         </motion.div>
       </div>

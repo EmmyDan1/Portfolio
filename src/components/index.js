@@ -10,6 +10,14 @@ export { default as Contact } from "./Contact";
 
 export const projects = [
   {
+    name: "Dancademy (Online Learning Platform)",
+    image: "https://picsum.photos/id/241/200/200",
+    alt: "Dancademy (Online Learning Platform)",
+    link: "https://dancademy.vercel.app/",
+    description:
+      "A sleek online learning platform for browsing, enrolling in, and tracking courses using a clean UI.",
+  },
+  {
     name: "Dan-X(Saas Admin-Dashboard)",
     image: "https://picsum.photos/id/234/200/200",
     alt: "Dan-X(Saas Admin-Dashboard)",
@@ -25,14 +33,7 @@ export const projects = [
       "React Router",
     ],
   },
-  {
-    name: "Dancademy (Online Learning Platform)",
-    image: "https://picsum.photos/id/241/200/200",
-    alt: "Dancademy (Online Learning Platform)",
-    link: "https://dancademy.vercel.app/",
-    description:
-      "A sleek online learning platform for browsing, enrolling in, and tracking courses using a clean UI.",
-  },
+
   {
     name: "VerVent Device Support and Repair",
     image: "https://picsum.photos/id/236/200/200",

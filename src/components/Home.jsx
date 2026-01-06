@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { FaAward } from "react-icons/fa6";
-import user from "../assets/Profilephoto4use.png";
+import user from "/PortFoto.png";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -54,119 +54,93 @@ const Home = () => {
     },
   ];
 
-  return (
-    <section
-      ref={containerRef}
-      className="min-h-screen w-full bg-[#0a0a0a] text-white overflow-hidden relative py-10"
+return (
+  <section
+    ref={containerRef}
+    className="min-h-screen w-full bg-[#0a0a0a] text-white overflow-hidden relative py-10"
+  >
+    
+    <motion.div
+      style={{ y: yBg }}
+      className="absolute inset-0 z-0 pointer-events-none"
     >
-      {/* Enhanced gradient background with more sophistication */}
+      <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-900/20 blur-3xl" />
+      <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-purple-900/20 blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 w-80 h-80 rounded-full bg-indigo-900/15 blur-3xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+    </motion.div>
+
+    
+    <div className="flex flex-col-reverse lg:flex-row h-full items-center container mx-auto px-4 relative z-10">
+     
       <motion.div
-        style={{ y: yBg }}
-        className="absolute inset-0 z-0 pointer-events-none"
+        className="flex flex-col w-full lg:w-auto lg:ml-16 mt-8 lg:mt-0"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-900/20 blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-purple-900/20 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 rounded-full bg-indigo-900/15 blur-3xl" />
-        {/* Added subtle grid overlay for depth */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
-      </motion.div>
-
-      <div className="flex flex-col lg:flex-row h-full items-center container mx-auto px-4 relative z-10">
-        {/* Mobile Image - Enhanced with better styling */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full max-w-xs mx-auto lg:hidden mb-8"
-        >
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="relative group"
+        <div className="text-center lg:text-left">
+       
+          <motion.span
+            className="inline-block bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white/90 border border-white/10 px-6 py-2 rounded-full mb-6 backdrop-blur-md font-medium text-sm tracking-wide"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.2)" }}
           >
-            <img
-              src={user}
-              alt="Daniel Emmanuel"
-              className="w-full h-auto object-cover rounded-2xl shadow-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300"
-            />
-            {/* Subtle glow effect on hover */}
-            <div className="absolute inset-0 rounded-2xl bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-          </motion.div>
-        </motion.div>
+            Hello! 👋
+          </motion.span>
 
-        <motion.div
-          className="flex flex-col lg:ml-16 mt-4 md:mt-0"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.div className="md:text-start pl-3">
-            {/* Enhanced badge with better styling */}
+          {/* Name and Title with better mobile spacing */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+            I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Daniel Emmanuel</span>,
+            <br className="hidden md:block" /> {/* Better line break control */}
             <motion.span
-              className="inline-block bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white/90 border border-white/10 px-6 py-2 rounded-full mb-6 backdrop-blur-md font-medium text-sm tracking-wide"
+              className="block mt-3 text-3xl md:text-4xl lg:text-5xl font-semibold text-white/90"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.2)" }}
+              transition={{ delay: 1.2 }}
             >
-              Hello! 👋
-            </motion.span>
-
-            {/* Enhanced typography hierarchy */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
-              I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Daniel Emmanuel</span>,
+              {text}
               <motion.span
-                className="block my-4 text-3xl md:text-4xl lg:text-5xl font-semibold text-white/90 tracking-wide"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 }}
-              >
-                {text}
-                <motion.span
-                  className="inline-block w-0.5 h-8 bg-gradient-to-b from-blue-400 to-purple-400 ml-1"
-                  animate={{ opacity: [0, 1, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 1,
-                    delay: fullText.length * 0.1,
-                  }}
-                />
-              </motion.span>
-            </h1>
-          </motion.div>
+                className="inline-block w-0.5 h-8 bg-gradient-to-b from-blue-400 to-purple-400 ml-1 align-middle"
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1,
+                  delay: fullText.length * 0.1,
+                }}
+              />
+            </motion.span>
+          </h1>
+        </div>
 
-          {/* Enhanced quote section */}
-          <motion.div
-            className="mb-12 max-w-2xl relative mt-6 md:mt-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            <ImQuotesLeft
-              className="absolute -left-2 -top-4 text-blue-400/40"
-              size={20}
-            />
-            <p className="text-lg text-center md:text-xl text-gray-300 leading-relaxed md:text-start font-light tracking-wide">
-              I build fast, responsive websites using React, TypeScript, and
-              TailwindCSS. I'm dedicated to writing clean code, creating smooth
-              interactions, and delivering a better experience for real users.
-            </p>
-            <ImQuotesRight
-              className="float-right mr-4 text-blue-400/40"
-              size={20}
-            />
-          </motion.div>
+        {/* Bio/Description with improved mobile centering */}
+        <motion.div
+          className="mb-10 max-w-2xl mx-auto lg:mx-0 relative"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
+          <p className="text-lg text-center lg:text-left text-gray-300 leading-relaxed font-light px-4 lg:px-0">
+            I build fast, responsive websites using React, TypeScript, and
+            TailwindCSS. I'm dedicated to writing clean code, creating smooth
+            interactions, and delivering a better experience for real users.
+          </p>
+        </motion.div>
 
-          {/* Enhanced stats and tech stack section */}
-          <motion.div
-            className="flex flex-col items-center md:flex-row md:items-start gap-8 mb-12"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-          >
-            {/* Enhanced experience card */}
+        {/* Stats & Tech Stack - Restructured for mobile */}
+        <motion.div
+          className="flex flex-col items-center lg:items-start gap-8 mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          {/* Experience Card - Centered on mobile, aligned left on desktop */}
+          <div className="flex justify-center lg:justify-start w-full">
             <motion.div
               whileHover={{ scale: 1.03, y: -2 }}
-              className="flex items-center gap-4 bg-white/5 px-6 py-4 rounded-xl backdrop-blur-md border border-white/10 hover:border-white/20 transition-all duration-300 group"
+              className="flex items-center gap-4 bg-white/5 px-6 py-4 rounded-xl backdrop-blur-md border border-white/10 hover:border-white/20 transition-all duration-300 group w-fit"
             >
               <div className="relative">
                 <FaAward size={40} className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
@@ -177,9 +151,11 @@ const Home = () => {
                 <p className="text-lg text-gray-300 font-light">Experience</p>
               </div>
             </motion.div>
+          </div>
 
-            {/* Enhanced tech stack with better spacing */}
-            <div className="flex gap-3 flex-wrap justify-center md:justify-start">
+          {/* Tech Stack - Improved mobile arrangement */}
+          <div className="w-full">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3">
               {techStack.map((tech, i) => (
                 <motion.div
                   key={tech.name}
@@ -187,50 +163,41 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + i * 0.1 }}
                   whileHover={{ y: -3, scale: 1.05 }}
-                  className="group relative bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-white/20 transition-all duration-300"
-                  data-tip={tech.name}
+                  className="group relative bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-white/20 transition-all duration-300 flex flex-col items-center"
                 >
                   {tech.icon}
-                  {/* Tooltip effect */}
-                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                  <div className="mt-2 text-xs text-gray-300 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     {tech.name}
                   </div>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.div>
+      </motion.div>
 
-        {/* Enhanced desktop image */}
+      {/* IMAGE SECTION - Now appears AFTER text on mobile due to flex-col-reverse */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-xs mx-auto lg:max-w-[320px] mb-10 lg:mb-0 lg:ml-80"
+      >
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="hidden lg:block w-full max-w-[320px] ml-80"
+          whileHover={{ scale: 1.02 }}
+          className="relative group"
         >
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className="relative group"
-          >
-            <motion.img
-              src={user}
-              alt="Daniel Emmanuel"
-              className="w-full h-auto object-cover rounded-2xl shadow-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300"
-            />
-            {/* Enhanced animated overlay */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              animate={{ opacity: [0.1, 0.2, 0.1] }}
-              transition={{ duration: 3, repeat: Infinity }}
-            />
-            {/* Subtle outer glow */}
-            <div className="absolute inset-0 rounded-2xl bg-blue-400/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </motion.div>
+          <img
+            src={user}
+            alt="Daniel Emmanuel"
+            className="w-full h-auto object-cover rounded-2xl shadow-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300"
+          />
+          <div className="absolute inset-0 rounded-2xl bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
         </motion.div>
-      </div>
-    </section>
-  );
+      </motion.div>
+    </div>
+  </section>
+);
 };
 
 export default Home;
